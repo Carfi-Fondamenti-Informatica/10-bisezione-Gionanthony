@@ -30,10 +30,10 @@ int main() {
                 a = x;
             }
             err = abs((b - a) / 2);
-    }} while (abs(err>=1e-6));
+    }} while (abs(err<=1e-6));
 
-    cout << x << endl;
-    cout << f(x) << endl;
-    
+    cout << (a+b)/2 << endl;
+    cout << f((a+b)/2) << endl;
+
     return 0;
     }
