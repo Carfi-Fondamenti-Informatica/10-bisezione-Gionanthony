@@ -16,7 +16,7 @@ int main() {
         cin >> b;
     } while (f(a)*f(b)>=0);
 
-    x = (a+b)/2;
+    x = ((a+b)/2);
 
     if (f(x) == 0) {
         cout << x << endl;
@@ -30,14 +30,15 @@ int main() {
         }
     }
 
-    if (abs((b - a) / 2) <= 1000000) {
+    if (abs((b - a) / 2) <= 0.000001) {
         cout << x << endl;
         cout << f(x) << endl;
     } else {
-        while (abs((b - a) / 2) >= 1000000) {
+        while (abs((b - a) / 2) >= 0.000001) {
             x = (a + b) / 2;
             cout << x << endl;
             cout << f(x) << endl;
+            break;
             }
         }
     return 0;
