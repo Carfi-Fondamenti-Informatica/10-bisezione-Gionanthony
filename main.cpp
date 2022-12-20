@@ -1,6 +1,48 @@
 #include <iostream>
+#include "cmath"
 using namespace std;
 
-int main() {
-   return 0;
+float f (float y) {
+    return ((y * y) * (cos(y)) + 1);
+
 }
+
+int main() {
+    float a, b, x, err;
+
+
+    do {
+        cout << "inserire estremi" << endl;
+        cin >> a;
+        cin >> b;
+    } while (f(a)*f(b)>=0);
+
+    x = (a+b)/2;
+
+    if (f(x) == 0) {
+        cout << x << endl;
+        cout << f(x) << endl;
+    } else {
+        if (f(a) * f(b) < 0) {
+            b = x;
+
+        } else {
+            a = x;
+        }
+    }
+
+    if (abs((b - a) / 2) <= 1000000) {
+        cout << x << endl;
+        cout << f(x) << endl;
+    } else {
+        while (abs((b - a) / 2) <= 1000000) {
+            x = (a+b)/2;
+
+            if (f(x) == 0) {
+                cout << x << endl;
+                cout << f(x) << endl;
+                }
+        }
+    }
+
+    return 0;
