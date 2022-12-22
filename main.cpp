@@ -24,7 +24,10 @@ int main() {
                 cout << x << endl;
                 cout << f(x) << endl;
                 break;
-            } else {
+            }
+
+            if (f(x) != 0) {
+
                 if (f(a) * f(b) < 0) {
                     b = x;
                     err = abs((b - a) / 2);
@@ -34,12 +37,14 @@ int main() {
                     err = abs((b - a) / 2);
                 }
             }
-            
-            cout << x << endl;
-            cout << f(x) << endl;
-            
-        } while (err <= 1e-6);
-            
 
+            if (err <= 1e-6) {
+                cout << x << endl;
+                cout << f(x) << endl;
+                break;
+            }
+
+        } while (err >= 1e-6);
+        
     return 0;
 }
