@@ -15,7 +15,7 @@ int main() {
         cin >> a;
         cin >> b;
     } while ((f(a)*f(b))>=0);
-    
+
         do {
             x = ((a + b) / 2);
 
@@ -33,5 +33,8 @@ int main() {
             }
         } while (err >= 1e-6);
 
+    cout << int (x * 10000) / 10000.0 << endl;
+    
     return 0;
 }
+
