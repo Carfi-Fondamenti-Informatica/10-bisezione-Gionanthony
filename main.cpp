@@ -15,36 +15,23 @@ int main() {
         cin >> a;
         cin >> b;
     } while ((f(a)*f(b))>=0);
-
-
+    
         do {
             x = ((a + b) / 2);
 
             if (f(x) == 0) {
                 cout << x << endl;
                 cout << f(x) << endl;
-                break;
-            }
-
-            if (f(x) != 0) {
-
+                return 0;
+            } else {
                 if (f(a) * f(b) < 0) {
                     b = x;
-                    err = abs((b - a) / 2);
-
                 } else {
                     a = x;
-                    err = abs((b - a) / 2);
                 }
+                err = abs ((b-a)/2);
             }
-
-            if (err <= 1e-6) {
-                cout << x << endl;
-                cout << f(x) << endl;
-                break;
-            }
-
         } while (err >= 1e-6);
-        
+
     return 0;
 }
