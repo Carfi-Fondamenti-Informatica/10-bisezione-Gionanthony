@@ -3,7 +3,9 @@
 using namespace std;
 
 float f (float y) {
-    return ((y * y) * (cos(y)) + 1);
+    float R;
+    R = ((y * y) * (cos(y)) + 1);
+    return R;
 
 }
 
@@ -32,8 +34,6 @@ int main() {
                 err = abs ((b-a)/2);
             }
         } while (err >= 1e-6);
-
-    cout << int (x * 10000) / 10000.0 << endl;
     
     return 0;
 }
