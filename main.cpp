@@ -59,7 +59,7 @@ int main() {
                 cout << f(x) << endl;
                 return 0;
             } else {
-                if (f(a) * f(x) < 0) {
+                if (f(a) * f(b) < 0) {
                     b = x;
                 } else {
                     a = x;
